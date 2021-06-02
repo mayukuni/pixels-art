@@ -1,7 +1,7 @@
 document.getElementsByClassName('color')[0].style.backgroundColor = 'black';
-document.getElementsByClassName('color')[1].style.backgroundColor = 'blue';
-document.getElementsByClassName('color')[2].style.backgroundColor = 'yellow';
-document.getElementsByClassName('color')[3].style.backgroundColor = 'purple';
+document.getElementsByClassName('color')[1].style.backgroundColor = 'lightGreen';
+document.getElementsByClassName('color')[2].style.backgroundColor = 'lightSkyBlue';
+document.getElementsByClassName('color')[3].style.backgroundColor = 'lightPink';
 
 let color1 = document.getElementsByClassName('color');
 let selectedColor = document.getElementsByClassName('selected')[0];
@@ -41,4 +41,4 @@ function clearBoard() {
 }
 
 let button = document.getElementById('clear-board')
-button.addEventListener('click', clearBoard)
+button.addEventListener('click', clearBoard);
