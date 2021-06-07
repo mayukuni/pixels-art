@@ -10,11 +10,10 @@
 }
 
 #pixel-board {
-  width: 200px;
-  height: 198px;
   border: 1px solid black;
+  display: grid;
+  border-style: none;
   margin: auto;
-  margin-top: 6px;
 }
 
 .pixel {
@@ -23,14 +22,15 @@
   height: 40px;
   display: inline-block;
   background-color: white;
-  margin: -3px;
+  margin-bottom: -5px;
+  margin-left: -1px;
+  margin-top: 0px;
 }
 
-button {
+#clear-board {
   display: block;
   margin: auto;
   padding: 5px;
-
 }
 
 body {
@@ -38,8 +38,12 @@ body {
 }
 
 h1 {
-  font-family: 'Dosis', sans-serif;
+  font-family: Dosis, sans-serif;
   font-size: 30px;
   margin: -4px;
   padding-top: 30px;
+}
+
+#board-size {
+  margin: 3px;
 }

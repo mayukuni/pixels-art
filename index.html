@@ -2,11 +2,11 @@
 <html lang="PT-BR">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pixels Art Project</title>
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&family=Odibee+Sans&display=swap" rel="stylesheet">
+  <title>Pixels Art Project</title>
 </head>
 <body>
   <!-- 1 -->
@@ -22,44 +22,10 @@
   </div>
 
   <button id="clear-board">Limpar</button>
+  <input id='board-size' type="number" min="1"> <button id="generate-board">VQV</button>
 
-  <div id="pixel-board">
-    <div id="line-one">
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-    </div>
-    <div id="line-two"> 
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-    </div>
-    <div id="line-three">
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-    </div>
-    <div id="line-four">
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-    </div>
-    <div id="line-five">
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-    </div>
-  </div>
+  <div id="pixel-board"></div>
+
   <script src="script.js"></script>
 </body>
 </html>
