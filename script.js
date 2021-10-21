@@ -1,7 +1,15 @@
 document.getElementsByClassName('color')[0].style.backgroundColor = 'black';
-document.getElementsByClassName('color')[1].style.backgroundColor = 'lightGreen';
-document.getElementsByClassName('color')[2].style.backgroundColor = 'lightSkyBlue';
-document.getElementsByClassName('color')[3].style.backgroundColor = 'lightPink';
+
+function randomColor() {
+  return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+}
+document.getElementsByClassName('color')[1].style.backgroundColor = randomColor();
+document.getElementsByClassName('color')[2].style.backgroundColor = randomColor();
+document.getElementsByClassName('color')[3].style.backgroundColor = randomColor();
+
+// console.log(document.getElementsByClassName('color')[1].style.backgroundColor)
+// console.log(document.getElementsByClassName('color')[2].style.backgroundColor)
+// console.log(document.getElementsByClassName('color')[3].style.backgroundColor)
 
 const color = document.getElementsByClassName('color');
 

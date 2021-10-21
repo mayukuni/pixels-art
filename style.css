@@ -18,13 +18,12 @@
 
 .pixel {
   border: solid black 1px;
-  width: 30px;
-  height: 30px;
-  display: inline-block;
+  width: 17px;
+  height: 17px;
+  display: inline-flex;
   background-color: white;
   margin-bottom: -5px;
   margin-left: -1px;
-  margin-top: 0px;
 }
 
 #clear-board {
