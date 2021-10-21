@@ -13,9 +13,9 @@ function removeSelectedClass() {
   }
 }
 
-function changeSelectedClass(click) {
+function changeSelectedClass(event) {
   removeSelectedClass();
-  click.target.classList.add('selected');
+  event.target.classList.add('selected');
 }
 
 color[0].addEventListener('click', changeSelectedClass);
@@ -44,7 +44,10 @@ const board = document.getElementById('pixel-board');
 function changeColorPixel(event) {
   const colorOfSelectedClass = document.getElementsByClassName('selected')[0].style.backgroundColor;
   const clickedPixel = event.target;
-  clickedPixel.style.backgroundColor = colorOfSelectedClass;
+  if (clickedPixel.className === 'pixel') {
+    clickedPixel.style.backgroundColor = colorOfSelectedClass;
+  }
+  console.log(clickedPixel)
 }
 board.addEventListener('click', changeColorPixel);
 
@@ -68,14 +71,11 @@ function resetBoard() {
   board.innerHTML = ''
 }
 
-function setPixelSize() {
-}
-
 function changeBoardSize() {
   resetBoard()
   if (input.value === '') {
     alert('Board inválido!')
-  } else if (input.value < 5) {
+  } else if (input.value < 5 ) {
     input.value = 5;
   } else if (input.value > 50) {
     input.value = 50;
