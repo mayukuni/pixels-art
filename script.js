@@ -62,7 +62,6 @@ function changeColorPixel(event) {
 }
 board.addEventListener('click', changeColorPixel);
 
-// 9
 
 function clearBoard() {
   for (let index = 0; index < pixel.length; index += 1) {
