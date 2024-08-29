@@ -9,7 +9,7 @@ function randomColor() {
 document.getElementsByClassName('color')[1].style.backgroundColor = randomColor();
 document.getElementsByClassName('color')[2].style.backgroundColor = randomColor();
 document.getElementsByClassName('color')[3].style.backgroundColor = randomColor();
-
+// teste
 
 const color = document.getElementsByClassName('color');
 
