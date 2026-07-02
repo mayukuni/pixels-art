@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600&family=Odibee+Sans&display=swap" rel="stylesheet">
+  <title>Pixel Art</title>
+</head>
+<body>
+  <header>
+    <h1 id="title">Pixel Art</h1>
+    <p class="subtitle">Selecione uma cor e clique nos pixels para pintar</p>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <div id="color-palette">
+        <span class="palette-label">Paleta</span>
+        <div class="color selected"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="size-controls">
+        <label for="board-size">Tamanho</label>
+        <input id="board-size" type="number" min="1" placeholder="5–50">
+        <button id="generate-board">Redimensionar</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <button id="clear-board">Limpar</button>
+    </div>
+
+    <div id="pixel-board"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

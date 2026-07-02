@@ -1,0 +1,213 @@
+/* ── Reset ──────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Base ───────────────────────────────────────────── */
+body {
+  background-color: #0d0b1e;
+  color: #f0ecff;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+header {
+  padding: 48px 20px 32px;
+  border-bottom: 1px solid rgba(146, 136, 248, 0.12);
+  margin-bottom: 36px;
+}
+
+#title {
+  font-family: 'Odibee Sans', sans-serif;
+  font-size: 64px;
+  letter-spacing: 0.08em;
+  background: linear-gradient(135deg, #9288F8 30%, #FFD2D7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6b6080;
+}
+
+/* ── Toolbar ────────────────────────────────────────── */
+.toolbar {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(28, 21, 53, 0.7);
+  border: 1px solid rgba(146, 136, 248, 0.18);
+  border-radius: 999px;
+  padding: 14px 28px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(8px);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(146, 136, 248, 0.18);
+}
+
+/* ── Color Palette ──────────────────────────────────── */
+#color-palette {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.palette-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6b6080;
+  margin-right: 4px;
+}
+
+.color {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid rgba(146, 136, 248, 0.2);
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  flex-shrink: 0;
+}
+
+.color:hover {
+  transform: scale(1.15);
+  border-color: rgba(146, 136, 248, 0.5);
+}
+
+.color.selected {
+  border-color: #9288F8;
+  box-shadow:
+    0 0 0 3px rgba(146, 136, 248, 0.25),
+    0 0 14px rgba(146, 136, 248, 0.35);
+  transform: scale(1.18);
+}
+
+/* ── Size Controls ──────────────────────────────────── */
+.size-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.size-controls label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6b6080;
+}
+
+#board-size {
+  width: 58px;
+  background: rgba(146, 136, 248, 0.08);
+  border: 1px solid rgba(146, 136, 248, 0.22);
+  border-radius: 8px;
+  color: #f0ecff;
+  font-family: 'Dosis', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 8px;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#board-size::placeholder {
+  color: #4a4060;
+}
+
+#board-size:focus {
+  border-color: #9288F8;
+  box-shadow: 0 0 0 3px rgba(146, 136, 248, 0.15);
+}
+
+/* hide number arrows */
+#board-size::-webkit-inner-spin-button,
+#board-size::-webkit-outer-spin-button { -webkit-appearance: none; }
+#board-size { -moz-appearance: textfield; }
+
+/* ── Buttons ────────────────────────────────────────── */
+button {
+  background: rgba(146, 136, 248, 0.12);
+  color: #9288F8;
+  border: 1px solid rgba(146, 136, 248, 0.28);
+  border-radius: 999px;
+  padding: 7px 18px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+button:hover {
+  background: rgba(146, 136, 248, 0.25);
+  border-color: #9288F8;
+  color: #f0ecff;
+}
+
+#clear-board {
+  background: rgba(255, 210, 215, 0.08);
+  color: #FFD2D7;
+  border-color: rgba(255, 210, 215, 0.25);
+}
+
+#clear-board:hover {
+  background: rgba(255, 210, 215, 0.18);
+  border-color: #FFD2D7;
+  color: #fff;
+}
+
+/* ── Pixel Board ────────────────────────────────────── */
+#pixel-board {
+  display: grid;
+  border: none;
+  margin: 0 auto;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(146, 136, 248, 0.15),
+    0 24px 64px rgba(0, 0, 0, 0.6);
+}
+
+.line {
+  display: flex;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  background-color: #1c1535;
+  border: 1px solid rgba(146, 136, 248, 0.08);
+  display: inline-flex;
+  margin-bottom: -5px;
+  margin-left: -1px;
+  cursor: crosshair;
+  transition: filter 0.06s ease;
+}
+
+.pixel:hover {
+  filter: brightness(1.4);
+}
